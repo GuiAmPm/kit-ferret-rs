@@ -54,6 +54,8 @@ Check the dependencies for [SDL2](https://github.com/Rust-SDL2/rust-sdl2).
 You need to have a SDL2.dll or SDL2.so in the PATH variable or copy it to the ```target/debug``` or ```target/release``` directory.
 If you're using VSCode it should be as easy as running the project, otherwise you can run ```cargo run --release``` on the project root folder.
 
+Use ```WASD``` keys as directionals, ```IJKL``` keys as the ```ABCD``` buttons and ```Enter``` as ```Start```, ```Tab``` as ```Select```, ```Q``` as ```L``` and ```O``` as ```R```
+
 ### On the Teensy
 
 First you need to install the same dependencies as described [here](https://github.com/mciantyre/teensy4-rs).
