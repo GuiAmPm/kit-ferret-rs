@@ -1,4 +1,4 @@
-# Kit Ferret - Game device made with Teensy 4.0 and Rust
+# Kit Ferret - Game device made with Teensy 4.0 and Rust (and cardboard)
 
 So, I've made game device!
 It runs on a Teensy 4.0 and the firmware is written in Rust.
@@ -9,7 +9,6 @@ This project is not meant to be used in any other way than learning purposes.
 ## Features
 
 ![A device made with a cardboard case, with micro-controller board and screen board installed outside of the case, screen turned off](assets/p1.jpg "Kit Ferret - A device made with a cardboard case, with micro-controller board and screen board installed outside of the case, screen turned off")
-
 
 ### Hardware
 
