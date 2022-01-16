@@ -56,7 +56,44 @@ If you're using VSCode it should be as easy as running the project, otherwise yo
 
 ### On the Teensy
 
-! TODO
+First you need to install the same dependencies as described [here](https://github.com/mciantyre/teensy4-rs).
+
+Run:
+``` rustup target add thumbv7em-none-eabihf ```
+
+Navigate to the project folder then run:
+
+``` BASH
+cd demo-kitferret
+mkdir bin
+cargo objcopy --release -- -O ihex bin/kit-ferret.hex
+cd ..
+```
+
+Upload the .hex file created in the demo-kitferret/bin folder to your teensy.
+
+You will need to have a ST7735 TFT LCD screen on pins:
+P7 => Backlight
+P8 => RST
+P9 => DC
+P10 => CS (Chip select)
+P11 => MOSI
+P12 => MISO
+P13 => CLK
+
+For the controller the pins they are setup in a matrix, for example if you turn on P0, you can check if either P3, P4, P5 or P6 are on to check for directionals, then turn it off, and turn P1, and test P3 to P6 for the ABCD buttons, and so on.
+
+Cables:
+Output pins:
+P0 => UP, RIGHT, DOWN, LEFT buttons
+P1 => A, B, C, D buttons
+P2 => START, SELECT, L, R buttons
+
+Input pins:
+P3 => UP, A, START
+P4 => RIGHT, B, SELECT
+P5 => DOWN, C, L
+P6 => LEFT, D, R
 
 ## Acknowledgments
 
