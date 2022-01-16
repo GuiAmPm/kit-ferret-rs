@@ -1,0 +1,48 @@
+[package]
+name = "demo-kitferret"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+cortex-m = "0.6.2"
+cortex-m-rt = "0.6.13"
+teensy4-panic = "0.2.0"
+embedded-hal = "0.2.6"
+embedded-graphics= "0.7.1"
+ferret-rs = { path = "../" }
+ferret-graphics = { path = "../ferret-graphics" }
+typenum = "1.14"
+
+[dependencies.nalgebra]
+default-features = false
+features = ["libm"]
+version = "0.29.0"
+
+[dependencies.st7735-lcd]
+features = ["graphics", "embedded-graphics"]
+version = "0.8.1"
+
+[dependencies.teensy4-bsp]
+version = "0.2"
+features = ["rt", "usb-logging"]
+
+[dependencies.num]
+version = "0.4"
+default-features = false
+
+[dependencies.num-traits]
+version = "0.2"
+default-features = false
+
+[dependencies.num-derive]
+version = "0.3"
+default-features = false
+
+# Only need logging when "usb-logging" is enabled
+[dependencies.log]
+version = "0.4.8"
+
+# # Don't optimize build dependencies, like proc macros.
+# # Helps with build times.
+[profile.release.build-override]
+opt-level = 3

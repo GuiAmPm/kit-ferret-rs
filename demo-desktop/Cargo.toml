@@ -1,0 +1,13 @@
+[package]
+name = "demo-desktop"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+ferret-rs = { path = "../"}
+ferret-graphics = { path = "../ferret-graphics" }
+
+
+[dependencies.sdl2]
+version = "0.35.1"
+features = ["unsafe_textures"]

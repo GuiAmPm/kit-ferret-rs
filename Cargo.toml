@@ -1,0 +1,17 @@
+[package]
+name = "ferret-rs"
+version = "0.0.0"
+edition = "2021"
+
+[workspace]
+members=["ferret-graphics", "demo-desktop", "demo-kitferret"]
+
+[dependencies]
+ferret-graphics = { path = "ferret-graphics" }
+ferret-utils = { path = "ferret-utils" }
+libm = "0.2.1"
+
+[dependencies.nalgebra]
+default-features = false
+features = ["libm", "macros"]
+version = "0.29.0"

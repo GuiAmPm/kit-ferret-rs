@@ -1,0 +1,12 @@
+[package]
+name = "ferret-graphics"
+version = "0.0.1"
+edition = "2021"
+
+[dependencies.nalgebra]
+default-features = false
+features = ["libm"]
+version = "0.29.0"
+
+[dependencies]
+ferret-utils = { path = "../ferret-utils" }

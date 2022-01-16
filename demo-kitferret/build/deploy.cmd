@@ -1,0 +1,1 @@
+rem how to deploy this to teensy via CLI?
